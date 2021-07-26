@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawer;
     Toolbar toolbar;
     ImageView cam;
-    ImageView gallery;
-    Bitmap bit;
+    ImageView gallery,good,bad;
+
 
 
     @Override
@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         drawer = findViewById(R.id.drawer);
         toolbar = findViewById(R.id.toolbar);
         cam = findViewById(R.id.cam);
+        good = findViewById(R.id.good);
+        bad= findViewById(R.id.bad);
         gallery=findViewById(R.id.pic);
         toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.open,R.string.close);
         drawer.addDrawerListener(toggle);
@@ -92,6 +94,21 @@ public class MainActivity extends AppCompatActivity {
 
                 startActivity(intent);
 
+            }
+        });
+
+        good.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            Intent i=new Intent(MainActivity.this,goodseedinfo.class);
+            startActivity(i);
+            }
+        });
+        bad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(MainActivity.this,badseedinfo.class);
+                startActivity(i);
             }
         });
     }

@@ -16,6 +16,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Help"
+        android:fontFamily="@font/belleza"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Feedback and Suggestions"
+        android:fontFamily="@font/belleza"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -41,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="FAQ"
+        android:fontFamily="@font/belleza"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -56,6 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Contact Us"
+        android:fontFamily="@font/belleza"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />

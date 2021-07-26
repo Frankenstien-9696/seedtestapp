@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".goodseedinfo">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="316dp"
+        android:layout_height="266dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125"
+        app:srcCompat="@drawable/bad" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="413dp"
+        android:layout_height="267dp"
+        android:fontFamily="@font/belleza"
+        android:justificationMode="inter_word"
+        android:padding="10dp"
+        android:text="Bad seed quality leads to low vigor and poor growth. They are also prone to weeds, insects, and diseases. There are various problems affecting crop establishment. These are cloddy soil, seed too deep, soil too soft at seeding, poor emergence in low spots in fields, heavy rainfall at seeding, soil crusting, poor seed distribution, low seed rate, water stress, muddy water at seeding, clogged seeder and/or pests such as ants, birds and rats that remove seed at planting"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.207" />
+</androidx.constraintlayout.widget.ConstraintLayout>

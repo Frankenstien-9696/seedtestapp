@@ -15,6 +15,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +30,7 @@ public class checkfromcam extends AppCompatActivity {
     ImageView img;
     TextView answer;
     Bitmap bitmap;
+    Button b;
     int total=0, count=0;
     float percent;
 
@@ -35,8 +38,16 @@ public class checkfromcam extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkfromcam);
-        img=(ImageView)findViewById(R.id.imageView2);
+        b=(Button) findViewById(R.id.button2);
+        img=(ImageView)findViewById(R.id.camanalysis);
         answer=(TextView)findViewById(R.id.show2);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(checkfromcam.this,MainActivity.class);
+                startActivity(i);
+            }
+        });
         if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.M){
             if(checkSelfPermission(Manifest.permission.CAMERA)== PackageManager.PERMISSION_DENIED ||
             checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED){

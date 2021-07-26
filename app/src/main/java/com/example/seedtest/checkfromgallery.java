@@ -12,6 +12,8 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +23,7 @@ import org.jetbrains.annotations.NotNull;
 public class checkfromgallery extends AppCompatActivity {
     ImageView img;
     TextView answer;
+    Button b;
     //View colorview;
 
     Bitmap bitmap;
@@ -33,9 +36,17 @@ public class checkfromgallery extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkfromgallery);
 
-
-        img=(ImageView) findViewById(R.id.imageView2);
+        b=(Button) findViewById(R.id.button2);
+        img=(ImageView) findViewById(R.id.camanalysis);
         answer=(TextView) findViewById(R.id.show2);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(checkfromgallery.this,MainActivity.class);
+                startActivity(i);
+            }
+        });
+
 
 
 

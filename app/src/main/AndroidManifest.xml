@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Seedtest">
-        <activity android:name=".checkfromcam"></activity>
+        <activity android:name=".badseedinfo"></activity>
+        <activity android:name=".goodseedinfo" />
+        <activity android:name=".checkfromcam" />
         <activity android:name=".checkfromgallery" />
         <activity android:name=".termsandconditions" />
         <activity android:name=".help" />
@@ -27,6 +29,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
