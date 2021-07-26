@@ -1,17 +1,23 @@
 package com.example.seedtest;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -23,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawer;
     Toolbar toolbar;
     ImageView cam;
+    ImageView gallery;
+    Bitmap bit;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         drawer = findViewById(R.id.drawer);
         toolbar = findViewById(R.id.toolbar);
         cam = findViewById(R.id.cam);
+        gallery=findViewById(R.id.pic);
         toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.open,R.string.close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
@@ -66,5 +76,16 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,checkfromgallery.class);
+
+                startActivity(intent);
+
+            }
+        });
     }
+
+
 }
